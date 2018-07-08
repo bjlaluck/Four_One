@@ -1,7 +1,7 @@
 <div class="container-fluid section-start" id="show-product">
   <p id="notice"><%= notice %></p>
 
-  <h1>Showing: <%= @product.name %> </h1>
+  <h1>Showing Product: <%= @product.name %> </h1>
   <p>
     <h2>Name:</h2>
     <%= @product.name %>
@@ -18,6 +18,6 @@
   </p>
 
 
-  <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-info" %> |
-  <%= link_to 'Back', products_path, class: "btn btn-warning" %>
+  <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-info bottom-link" %>
+  <%= link_to 'Back', products_path, class: "btn btn-warning bottom-link" %>
 </div>
