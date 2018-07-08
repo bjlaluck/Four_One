@@ -3900,3 +3900,1724 @@ Processing by SimplePagesController#contact as HTML
 Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateProducts (20180707231821)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180707231821_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180707231821"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-07 23:22:23.245640"], ["updated_at", "2018-07-07 23:22:23.245640"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:25:55 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bohdanlaluck/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (357.4ms)
+Completed 200 OK in 460ms (Views: 447.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:26:08 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:29:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:30:23 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:31:09 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (34.2ms)
+  Rendered products/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 75ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:31:16 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.6ms)
+  Rendered products/new.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 103ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:33:30 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:33:32 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:33:33 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:33:34 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:33:36 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:33:38 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:33:40 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:33:41 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 76ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:37:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:38:04 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:38:05 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:38:06 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:38:07 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 84ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:38:08 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 117ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:38:09 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:38:12 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 107ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:38:12 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:38:13 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:38:16 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 115ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:38:19 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 122ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:38:20 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:38:51 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.9ms)
+  Rendered products/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:44:19 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"products"}, missing required keys: [:id]):
+    39:                   <ul class="dropdown-menu">
+    40:                     <li class="<%= 'active' if current_page?(products_path) %>"><%= link_to "Products", root_path, class: "dropdown-toggle" %></li>
+    41:                     <li class="<%= 'active' if current_page?(new_product_path) %>"><%= link_to "New Products", simple_pages_about_path, class: "dropdown-toggle" %></li>
+    42:                     <li class="<%= 'active' if current_page?(edit_product_path) %>"><%= link_to "Show Products", simple_pages_contact_path, class: "dropdown-toggle" %></li>
+    43:                     <li class="<%= 'active' if current_page?(edit_product_path) %>"><%= link_to "Edit Products", simple_pages_contact_path, class: "dropdown-toggle" %></li>   
+    44:                   </ul>
+    45:               </li>
+  
+app/views/layouts/application.html.erb:42:in `_app_views_layouts_application_html_erb___1980638124227328568_70288458580340'
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:47:03 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products_index_path' for #<#<Class:0x00007fda9d49bbf8>:0x00007fda9ebd3848>
+Did you mean?  products_path):
+    37:                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    38:                   Products<span class="caret"></span></a>
+    39:                   <ul class="dropdown-menu">
+    40:                     <li class="<%= 'active' if current_page?(products_index_path) %>"><%= link_to "Products", products_index_path, class: "dropdown-toggle" %></li>
+    41:                     <li class="<%= 'active' if current_page?(products_new_path) %>"><%= link_to "New Products", products_new_path, class: "dropdown-toggle" %></li>
+    42:                     <li class="<%= 'active' if current_page?(products_show_path) %>"><%= link_to "Show Products", products_show_path, class: "dropdown-toggle" %></li>
+    43:                     <li class="<%= 'active' if current_page?(products_edit_path) %>"><%= link_to "Edit Products", products_edit_path, class: "dropdown-toggle" %></li>
+  
+app/views/layouts/application.html.erb:40:in `_app_views_layouts_application_html_erb___1980638124227328568_70288471392780'
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:48:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products_new_path' for #<#<Class:0x00007fda9d49bbf8>:0x00007fdaa0f154c8>
+Did you mean?  products_path
+               product_path):
+    38:                   Products<span class="caret"></span></a>
+    39:                   <ul class="dropdown-menu">
+    40:                     <li class="<%= 'active' if current_page?(products_path) %>"><%= link_to "Products", products_path, class: "dropdown-toggle" %></li>
+    41:                     <li class="<%= 'active' if current_page?(products_new_path) %>"><%= link_to "New Products", products_new_path, class: "dropdown-toggle" %></li>
+    42:                     <li class="<%= 'active' if current_page?(products_show_path) %>"><%= link_to "Show Products", products_show_path, class: "dropdown-toggle" %></li>
+    43:                     <li class="<%= 'active' if current_page?(products_edit_path) %>"><%= link_to "Edit Products", products_edit_path, class: "dropdown-toggle" %></li>
+    44:                   </ul>
+  
+app/views/layouts/application.html.erb:41:in `_app_views_layouts_application_html_erb___1980638124227328568_70288489851940'
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:52:18 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"products"}, missing required keys: [:id]):
+    39:                   <ul class="dropdown-menu">
+    40:                     <li class="<%= 'active' if current_page?(products_path) %>"><%= link_to "Products", products_path, class: "dropdown-toggle" %></li>
+    41:                     <li class="<%= 'active' if current_page?(new_product_path) %>"><%= link_to "New Products", new_product_path, class: "dropdown-toggle" %></li>
+    42:                     <li class="<%= 'active' if current_page?(edit_product_path) %>"><%= link_to "Edit Products", edit_product_path, class: "dropdown-toggle" %></li>
+    43:                   </ul>
+    44:               </li>
+    45:               <!--
+  
+app/views/layouts/application.html.erb:42:in `_app_views_layouts_application_html_erb___1980638124227328568_70288490020400'
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:52:41 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:52:45 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:52:48 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.4ms)
+  Rendered products/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:52:51 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:52:57 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 74ms (Views: 65.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:53:00 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (16.7ms)
+  Rendered products/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:53:51 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.0ms)
+  Rendered products/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-07-07 19:54:09 -0400
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Weq4/tdybGxRLAjyLN6QWJRYbbq+aAiH85XsxWO6iTo3EtGB1ocwYqsEtAHNxtvqHvcJbe4Nx5t67F6OEZIwHQ==", "product"=>{"name"=>"GGG", "description"=>"GGGG", "image_url"=>"www.google.com"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "GGG"], ["description", "GGGG"], ["image_url", "www.google.com"], ["created_at", "2018-07-07 23:54:09.029659"], ["updated_at", "2018-07-07 23:54:09.029659"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 19:54:09 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:54:15 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 19:54:25 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 140ms (Views: 132.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:55:13 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.4ms)
+  Rendered products/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:55:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 81ms (Views: 75.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 19:55:19 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:55:24 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (12.0ms)
+  Rendered products/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 127ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:55:33 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 99ms (Views: 94.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:55:37 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.2ms)
+  Rendered products/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 131ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:55:40 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:55:44 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (12.1ms)
+  Rendered products/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 103ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:55:47 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:55:49 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:55:51 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:55:53 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 19:55:56 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.5ms)
+  Rendered products/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 137ms (Views: 130.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:57:37 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 152ms (Views: 145.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:57:39 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 130ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:57:41 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 78ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 19:57:43 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 87ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 19:58:40 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 99ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 19:58:42 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 19:58:46 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 78ms (Views: 72.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:00:18 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 20:00:21 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 20:00:22 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 20:00:23 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:00:24 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 125ms (Views: 120.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:01:55 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 20:01:58 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 157ms (Views: 153.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 20:01:59 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 20:02:00 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:02:01 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 80ms (Views: 72.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:05:45 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:05:47 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:06:33 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:06:45 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:06:52 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 134ms (Views: 126.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:07:50 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:08:01 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:09:18 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:09:26 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.9ms)
+  Rendered products/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:09:41 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:09:45 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 126ms (Views: 117.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:09:49 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 147ms (Views: 139.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:09:50 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (5.2ms)
+  Rendered products/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 111ms (Views: 104.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:09:53 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 90ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:10:28 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (30.7ms)
+  Rendered products/edit.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 151ms (Views: 142.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:10:55 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.2ms)
+  Rendered products/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:11:03 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 56ms (Views: 49.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:11:06 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:11:07 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 77ms (Views: 69.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:11:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 91ms (Views: 84.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:11:10 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (11.9ms)
+  Rendered products/edit.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 130ms (Views: 120.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:11:11 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 101ms (Views: 92.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 20:11:45 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.3ms)
+  Rendered products/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:12:53 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 137ms (Views: 129.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:13:27 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:13:46 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 20:14:09 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.2ms)
+  Rendered products/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 45ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-07-07 20:14:21 -0400
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dqqo+FWmGwkSOXUcF4HtRlHd2O1yhpaLywx1QCWZUjSU+boXhaveVIU79G17W/x51IhFsQqK195Q1gcWY+t8MQ==", "product"=>{"name"=>"", "description"=>"", "image_url"=>""}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["description", ""], ["image_url", ""], ["created_at", "2018-07-08 00:14:21.944094"], ["updated_at", "2018-07-08 00:14:21.944094"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-07-07 20:14:21 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:14:25 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/products/2" for 127.0.0.1 at 2018-07-07 20:14:28 -0400
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tsGnXRRy8EFNwn1QcFpdCizWtgw0w2YS8IX3ZnCTpVrYOc4iFYesT7fqwaORQha4pnnS22SmqQ55/EUtArscfQ==", "id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:57
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:57
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:57
+Redirected to http://localhost:3000/products
+Completed 302 Found in 11ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:14:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:14:32 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:14:41 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 42ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:14:54 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.4ms)
+  Rendered products/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 43ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:15:42 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:15:44 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 36.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:16:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 95ms (Views: 88.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:17:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:17:11 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 64ms (Views: 58.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:17:15 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.3ms)
+  Rendered products/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:17:46 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.3ms)
+  Rendered products/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 38ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:18:19 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:18:20 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.6ms)
+  Rendered products/edit.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 207ms (Views: 198.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:18:21 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:18:23 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 134ms (Views: 105.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:18:25 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 139ms (Views: 132.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:18:26 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (11.5ms)
+  Rendered products/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 108ms (Views: 99.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:18:28 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 113ms (Views: 107.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 20:18:33 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.1ms)
+  Rendered products/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 20:20:15 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.5ms)
+  Rendered products/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:20:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:22:00 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:22:10 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:22:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 116ms (Views: 108.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 20:23:04 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.1ms)
+  Rendered products/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:23:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 75ms (Views: 70.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:23:08 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (10.4ms)
+  Rendered products/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:23:11 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 80ms (Views: 73.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:23:12 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 81ms (Views: 72.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:23:14 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.9ms)
+  Rendered products/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 82ms (Views: 73.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:23:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (13.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 108ms (Views: 89.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:24:31 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:24:33 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:25:45 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:25:50 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:26:40 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 102ms (Views: 93.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:26:43 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.6ms)
+  Rendered products/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:26:46 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 81ms (Views: 73.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:26:47 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (24.2ms)
+  Rendered products/edit.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 101ms (Views: 95.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:26:49 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 98.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:28:01 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:28:09 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:28:11 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.6ms)
+  Rendered products/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 46ms (Views: 37.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:28:13 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 92ms (Views: 84.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:28:14 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (15.7ms)
+  Rendered products/edit.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 110ms (Views: 99.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:28:18 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 83ms (Views: 76.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:28:54 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:28:55 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:28:56 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:29:03 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:29:04 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:32:49 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:32:50 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:32:52 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:32:54 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:32:55 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:32:56 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:33:56 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:33:58 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:34:01 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 97ms (Views: 84.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:35:31 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:35:32 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:35:34 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:35:35 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:35:44 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:35:47 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 81ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:35:49 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (7.2ms)
+  Rendered products/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:35:52 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 71ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/1/edit" for 127.0.0.1 at 2018-07-07 20:35:54 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (4.7ms)
+  Rendered products/edit.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 113ms (Views: 106.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2018-07-07 20:35:57 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 81ms (Views: 72.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:35:58 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 71ms (Views: 64.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:37:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-07-07 20:37:19 -0400
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.9ms)
+  Rendered products/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 41ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/contact" for 127.0.0.1 at 2018-07-07 20:37:33 -0400
+Processing by SimplePagesController#contact as HTML
+  Rendering simple_pages/contact.html.erb within layouts/application
+  Rendered simple_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple_pages/about" for 127.0.0.1 at 2018-07-07 20:37:34 -0400
+Processing by SimplePagesController#about as HTML
+  Rendering simple_pages/about.html.erb within layouts/application
+  Rendered simple_pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-07 20:37:35 -0400
+Processing by SimplePagesController#index as HTML
+  Rendering simple_pages/index.html.erb within layouts/application
+  Rendered simple_pages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:37:35 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:38:34 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-07 20:38:35 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+

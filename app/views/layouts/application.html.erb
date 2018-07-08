@@ -32,15 +32,18 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path, class: "dropdown-toggle" %></li>
             <li class="<%= 'active' if current_page?(simple_pages_about_path) %>"><%= link_to "About", simple_pages_about_path, class: "dropdown-toggle" %></li>
-            <li class="<%= 'active' if current_page?(simple_pages_contact_path) %>"><%= link_to "Contact", simple_pages_contact_path, class: "dropdown-toggle" %></li>            <!-- Navbar link with a dropdown menu -->
+            <li class="<%= 'active' if current_page?(simple_pages_contact_path) %>"><%= link_to "Contact", simple_pages_contact_path, class: "dropdown-toggle" %></li>
+            <li class="<%= 'active' if current_page?(products_path) %>"><%= link_to "Products", products_path, class: "dropdown-toggle" %></li>         <!-- Navbar link with a dropdown menu -->
             <!--  <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Work<span class="caret"></span></a>
+                  Products<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="#work1">Work 1</a></li>
-                      <li><a href="#work2">Work 2</a></li>
+                    <li class="<%= 'active' if current_page?(products_path) %>"><%= link_to "Products", products_path, class: "dropdown-toggle" %></li>
+                    <li class="<%= 'active' if current_page?(new_product_path) %>"><%= link_to "New Products", new_product_path, class: "dropdown-toggle" %></li>
+
                   </ul>
               </li>
+              <!--
             <li><a href="#faq" class="dropdown-toggle">FAQ</a></li>
             <li><a href="#video" class="dropdown-toggle">Video</a></li>
           -->
