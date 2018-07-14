@@ -7,7 +7,8 @@
     <div class="row">
       <% @products.each do |product| %>
         <div class="col-xs-12  col-sm-6 col-md-4 col-lg-3  ">
-          <%= image_tag(product.image_url, class: "img-fluid img-responsive img-modify", height: '1000', width: "636") %><h1><%= product.name %></h1></a>
+          <%= image_tag(product.image_url, class: "img-fluid img-responsive img-modify") %>
+           <h1><%= product.name %></h1></a>
           <p><%= product.description %></p><hr>
           <h2>$ <%= product.price %></h2>
 
