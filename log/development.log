@@ -11648,3 +11648,29 @@ Completed 200 OK in 92ms (Views: 88.3ms | ActiveRecord: 0.3ms)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Allied Alfa"], ["description", "Best Racing Bike - This American-made masterpiece evokes the handling and feel of an old-school steel racer in a carbon frame with the weight, stiffness, and performance of a fully modern machine. "], ["image_url", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/allied-alfa-1523988058.jpg"], ["created_at", "2018-07-16 02:02:33.401902"], ["updated_at", "2018-07-16 02:02:33.401902"], ["colour", "Blue"], ["price", 7920.22]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kona Sutra\n"], ["description", "Best Touring Bike - If you are planning a long distance tour on a bicycle, and have the budget to buy a really good one, then the Kona Sutra should definitely be a front runner. Has hearstapps, integrated mud guards and a rear pannier rack, the touring-focused tiers and saddle."], ["image_url", "https://i0.wp.com/tomsbiketrip.com/wp-content/uploads/2017/01/kona-sutra-2018.jpg"], ["created_at", "2018-07-16 02:02:33.406338"], ["updated_at", "2018-07-16 02:02:33.406338"], ["colour", "Navy"], ["price", 1861.95]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Budnitz No. 3"], ["description", "The Budnitz No. 3 is a commuter bike that has a mean streak and likes to be ridden fast. The steel (or titanium) frame has a semi-racy geometry and accommodates 29-inch wheels which allow you to run tires up to 2.35-inches wide."], ["image_url", "https://budnitzbicycles.com/media/bike_images/2223/large_budnitz-bicycles_No.3.3_Ti_Hero.jpg"], ["created_at", "2018-07-16 02:02:33.409800"], ["updated_at", "2018-07-16 02:02:33.409800"], ["colour", "Gray"], ["price", 4450.45]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "image_url", "created_at", "updated_at", "colour", "price") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Evil Following MB"], ["description", "Best All-Terrain Bike - Unbelievable control and freakish speed breeding meet epic efficiency and practical versatility.  Benchmark-resetting short-travel control and speed; efficient and agile enough for XC singletrack hustling; carbon-rich kit collection."], ["image_url", "https://www.outsideonline.com/sites/default/files/styles/img_850-width_flex-height/public/2018/05/13/evil-the-following-mb-goty_h.jpg"], ["created_at", "2018-07-16 02:02:33.413102"], ["updated_at", "2018-07-16 02:02:33.413102"], ["colour", "Dark Gray"], ["price", 7399.76]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
