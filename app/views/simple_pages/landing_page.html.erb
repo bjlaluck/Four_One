@@ -1,11 +1,31 @@
-<div class="container-fluid section-start" id="landing-page">
-  <h2>Featured Product:</h2>
-  <h1><%= @featured_product.name %></h1>
+<div class="container-fluid section-start" id="index">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @products.each_with_index do |product, index| %>
+          <li data-target="#carouselExampleIndicators" data-slide-to="<%=index%>" class="<%= ' active' if product == @products.first%>"></li>
+      <% end %>
 
-    <%= image_tag(@featured_product.image_url, class: "img-fluid img-responsive img-modify") %>
+    </ol>
+    <div class="carousel-inner">
 
-    <p><%= @featured_product.description %></p><hr>
-    <h2>$ <%= @featured_product.price %></h2>
+            <% @products.each do |product| %>
+            <div class="carousel-item item<%= ' active' if product == @products.first %>">
+              <%= image_tag(product.image_url, class: "img-fluid img-responsive image-carousel") %>
 
+              <div class="carousel-caption d-none d-md-block">
+                <p><%= product.name %></p>
+              </div>
+            </div>
+            <% end %>
 
+       </div>
+    <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>

@@ -71,3 +71,23 @@ img {
   font-family: Cousine, Lucida, Courier, monospace;
   font-size: 2em;
 }
+
+.carousel-caption {
+  color: black;
+}
+
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
+  border:1px solid black;
+}
+
+.carousel-indicators .active{
+  background-color: black;
+}
+
+.image-carousel {
+  width: 1200px;
+  
+  object-fit:scale-down;
+}
