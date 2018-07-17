@@ -1,7 +1,10 @@
 <div class="container-fluid section-start" id="orders-show">
-  <h1>Orders#show</h1>
-  <p>Find me in app/views/orders/show.html.erb</p>
+  <h2>Order Information</h2>
+  <strong>Order ID: </strong><%= @order.id %>
+  <strong>Product Name: </strong><%= @order.product.name %>
+  <strong>Product Price: </strong><%= number_to_currency(@order.product.price) %>
+  <strong>Total Price: </strong><%= number_to_currency(@order.total) %>
   <br>
-
-  <%= link_to 'Go To Order Index', orders_index_path, class: "btn btn-warning" %>
+  <br>
+  <%= link_to 'Go To All Orders', orders_index_path, class: "btn btn-warning" %>
 </div>
