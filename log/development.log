@@ -12542,3 +12542,46 @@ Processing by OrdersController#index as HTML
 Completed 200 OK in 92ms (Views: 82.3ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/orders/index" for 127.0.0.1 at 2018-07-16 20:39:52 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/bohdanlaluck/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/index.html.erb:4
+  Rendered orders/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 280ms (Views: 264.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-16 20:39:54 -0400
+Processing by SimplePagesController#landing_page as HTML
+  Rendering simple_pages/landing_page.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/simple_pages/landing_page.html.erb:4
+  Rendered simple_pages/landing_page.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-07-16 20:39:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  Rendered collection of products/_product.html.erb [4 times] (1.9ms)
+  Rendered products/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 53ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/index" for 127.0.0.1 at 2018-07-16 20:39:58 -0400
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/index.html.erb:4
+  Rendered orders/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 185ms (Views: 177.2ms | ActiveRecord: 0.8ms)
+
+
