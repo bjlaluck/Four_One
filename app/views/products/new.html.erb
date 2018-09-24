@@ -3,5 +3,5 @@
 
   <%= render 'form', product: @product %>
 
-  <%= link_to 'Back', products_path, class: "btn btn-warning bottom-link" %>
+  <%= link_to 'Back', request.referer, class: "btn btn-warning bottom-link" %>
 </div>
